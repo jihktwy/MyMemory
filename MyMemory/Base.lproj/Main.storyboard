@@ -71,6 +71,11 @@
                                         <constraint firstItem="S4o-my-8Ts" firstAttribute="leading" secondItem="J6U-a6-jmc" secondAttribute="trailing" constant="10" id="qs5-rm-maA"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="J6U-a6-jmc" id="zB8-pI-hpf"/>
+                                    <outlet property="regdata" destination="S4o-my-8Ts" id="Afh-DC-r1S"/>
+                                    <outlet property="subject" destination="8vG-mL-1Xs" id="wah-VR-vVg"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="qbl-Qy-hKp" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="108" width="375" height="80"/>
@@ -101,6 +106,7 @@
                                             <rect key="frame" x="16" y="11" width="58" height="58"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="gP9-oy-aMS" secondAttribute="height" multiplier="1:1" id="484-zH-A88"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="5Vg-7o-pt3"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1970-01-01" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nc3-Zx-q6c" userLabel="날짜">
@@ -128,6 +134,12 @@
                                         <constraint firstItem="lPG-I9-aEe" firstAttribute="leading" secondItem="gP9-oy-aMS" secondAttribute="trailing" constant="10" id="uDQ-za-YJm"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="lPG-I9-aEe" id="h2r-r8-akt"/>
+                                    <outlet property="img" destination="gP9-oy-aMS" id="RdP-mO-7dG"/>
+                                    <outlet property="regdata" destination="Nc3-Zx-q6c" id="Bew-mt-3lP"/>
+                                    <outlet property="subject" destination="Xg7-3H-gGx" id="LcH-1R-916"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -136,7 +148,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="목록" id="EP6-BT-kBa">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="dpD-Zw-DCX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dpD-Zw-DCX">
                             <connections>
                                 <segue destination="xW0-Ao-GSi" kind="show" id="bzL-wa-foD"/>
                             </connections>
@@ -153,7 +165,7 @@
         <!--상세 화면-->
         <scene sceneID="kJE-OO-j0i">
             <objects>
-                <viewController title="상세 화면" id="5Z1-Yb-BLS" customClass="MemoReadVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoRead" title="상세 화면" id="5Z1-Yb-BLS" customClass="MemoReadVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CvN-Wr-JjB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,6 +207,11 @@
                         <viewLayoutGuide key="safeArea" id="4mV-Cm-oez"/>
                     </view>
                     <navigationItem key="navigationItem" title="상세 화면" id="y7T-Vg-e1R"/>
+                    <connections>
+                        <outlet property="contents" destination="N9N-55-bG1" id="mY8-uM-jQO"/>
+                        <outlet property="img" destination="ygy-3i-uBH" id="jcI-Ub-Gak"/>
+                        <outlet property="subject" destination="GHb-2h-eZ2" id="hQg-Vz-geh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUK-2p-cTn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,10 +254,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="메모 작성" id="7OU-ZU-Fu8">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="vB7-5p-nMV"/>
-                            <barButtonItem title="저장" id="0qy-E3-aeW"/>
+                            <barButtonItem systemItem="camera" id="vB7-5p-nMV">
+                                <connections>
+                                    <action selector="pick:" destination="xW0-Ao-GSi" id="XFd-PV-SO0"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="저장" id="0qy-E3-aeW">
+                                <connections>
+                                    <action selector="save:" destination="xW0-Ao-GSi" id="XcX-Fy-Geh"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contents" destination="nhd-o8-JED" id="3h7-KA-StG"/>
+                        <outlet property="preview" destination="LhC-BN-H7j" id="Vdr-aO-Tmu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hla-2F-dZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

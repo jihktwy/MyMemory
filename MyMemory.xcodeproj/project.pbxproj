@@ -17,6 +17,7 @@
 		F4870873232231C100C456AA /* MemoFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4870872232231C100C456AA /* MemoFormVC.swift */; };
 		F4870875232231CF00C456AA /* MemoReadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4870874232231CF00C456AA /* MemoReadVC.swift */; };
 		F48708772322321D00C456AA /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48708762322321D00C456AA /* MemoCell.swift */; };
+		F48708792322332000C456AA /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48708782322332000C456AA /* MemoData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F4870872232231C100C456AA /* MemoFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFormVC.swift; sourceTree = "<group>"; };
 		F4870874232231CF00C456AA /* MemoReadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadVC.swift; sourceTree = "<group>"; };
 		F48708762322321D00C456AA /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		F48708782322332000C456AA /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				F48708592322198A00C456AA /* AppDelegate.swift */,
 				F487085B2322198A00C456AA /* ViewController.swift */,
 				F487085D2322198A00C456AA /* Main.storyboard */,
+				F48708782322332000C456AA /* MemoData.swift */,
 				F48708702322319100C456AA /* MemoListVC.swift */,
 				F4870872232231C100C456AA /* MemoFormVC.swift */,
 				F4870874232231CF00C456AA /* MemoReadVC.swift */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F48708772322321D00C456AA /* MemoCell.swift in Sources */,
+				F48708792322332000C456AA /* MemoData.swift in Sources */,
 				F48708622322198A00C456AA /* MyMemory.xcdatamodeld in Sources */,
 				F4870873232231C100C456AA /* MemoFormVC.swift in Sources */,
 				F4870875232231CF00C456AA /* MemoReadVC.swift in Sources */,
