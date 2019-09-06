@@ -13,6 +13,10 @@
 		F48708622322198A00C456AA /* MyMemory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F48708602322198A00C456AA /* MyMemory.xcdatamodeld */; };
 		F48708642322198B00C456AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48708632322198B00C456AA /* Assets.xcassets */; };
 		F48708672322198B00C456AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48708652322198B00C456AA /* LaunchScreen.storyboard */; };
+		F48708712322319100C456AA /* MemoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48708702322319100C456AA /* MemoListVC.swift */; };
+		F4870873232231C100C456AA /* MemoFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4870872232231C100C456AA /* MemoFormVC.swift */; };
+		F4870875232231CF00C456AA /* MemoReadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4870874232231CF00C456AA /* MemoReadVC.swift */; };
+		F48708772322321D00C456AA /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48708762322321D00C456AA /* MemoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		F48708632322198B00C456AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F48708662322198B00C456AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F48708682322198B00C456AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F48708702322319100C456AA /* MemoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListVC.swift; sourceTree = "<group>"; };
+		F4870872232231C100C456AA /* MemoFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFormVC.swift; sourceTree = "<group>"; };
+		F4870874232231CF00C456AA /* MemoReadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadVC.swift; sourceTree = "<group>"; };
+		F48708762322321D00C456AA /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				F48708592322198A00C456AA /* AppDelegate.swift */,
 				F487085B2322198A00C456AA /* ViewController.swift */,
 				F487085D2322198A00C456AA /* Main.storyboard */,
+				F48708702322319100C456AA /* MemoListVC.swift */,
+				F4870872232231C100C456AA /* MemoFormVC.swift */,
+				F4870874232231CF00C456AA /* MemoReadVC.swift */,
+				F48708762322321D00C456AA /* MemoCell.swift */,
 				F48708632322198B00C456AA /* Assets.xcassets */,
 				F48708652322198B00C456AA /* LaunchScreen.storyboard */,
 				F48708682322198B00C456AA /* Info.plist */,
@@ -138,8 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48708772322321D00C456AA /* MemoCell.swift in Sources */,
 				F48708622322198A00C456AA /* MyMemory.xcdatamodeld in Sources */,
+				F4870873232231C100C456AA /* MemoFormVC.swift in Sources */,
+				F4870875232231CF00C456AA /* MemoReadVC.swift in Sources */,
 				F487085C2322198A00C456AA /* ViewController.swift in Sources */,
+				F48708712322319100C456AA /* MemoListVC.swift in Sources */,
 				F487085A2322198A00C456AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
