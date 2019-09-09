@@ -38,6 +38,7 @@ class MemoFormVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
     override func viewDidLoad() {
         self.contents.delegate = self
     }
@@ -61,7 +62,34 @@ extension MemoFormVC: UINavigationControllerDelegate, UIImagePickerControllerDel
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
-        self.present(picker, animated: false)
+        
+        let alertPhoto = UIAlertController(title: "선택", message: "항목을 선택해주세요", preferredStyle: .actionSheet)
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        let cameraAS = UIAlertAction(title: "카메라", style: .default) { (_) in
+            picker.sourceType = .camera
+             self.present(picker, animated: false)
+        }
+        let photoLibararyAS = UIAlertAction(title: "포토", style: .default) { (_) in
+            picker.sourceType = .photoLibrary
+             self.present(picker, animated: false)
+        }
+        let savedPhotosAlbumAS = UIAlertAction(title: "앨범", style: .default) { (_) in
+            picker.sourceType = .savedPhotosAlbum
+            self.present(picker, animated: false)
+        }
+        
+        alertPhoto.addAction(cancel)
+        alertPhoto.addAction(cameraAS)
+        alertPhoto.addAction(photoLibararyAS)
+        alertPhoto.addAction(savedPhotosAlbumAS)
+        self.present(alertPhoto, animated: true)
+        
+        
+       
+//        picker.sourceType = .camera
+//        picker.sourceType = .photoLibrary
+//        picker.sourceType = .savedPhotosAlbum
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -69,6 +97,13 @@ extension MemoFormVC: UINavigationControllerDelegate, UIImagePickerControllerDel
             self.preview.image = editedImage
             picker.dismiss(animated: false)
         }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: false)
+        let alert = UIAlertController(title: "", message: "이미지 선택이 취소 되었습니다.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .cancel))
+        self.present(alert, animated: false)
     }
 }
 
@@ -81,4 +116,8 @@ extension MemoFormVC: UITextViewDelegate {
         // 네비게이션 타이틀에 표시한다.
         self.navigationItem.title = subject
     }
+}
+
+extension MemoFormVC: UIPopoverPresentationControllerDelegate {
+    
 }
