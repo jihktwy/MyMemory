@@ -18,6 +18,7 @@
 		F4870875232231CF00C456AA /* MemoReadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4870874232231CF00C456AA /* MemoReadVC.swift */; };
 		F48708772322321D00C456AA /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48708762322321D00C456AA /* MemoCell.swift */; };
 		F48708792322332000C456AA /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48708782322332000C456AA /* MemoData.swift */; };
+		F487087C2325E14700C456AA /* fountainpen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F487087B2325E14700C456AA /* fountainpen@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F4870874232231CF00C456AA /* MemoReadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadVC.swift; sourceTree = "<group>"; };
 		F48708762322321D00C456AA /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		F48708782322332000C456AA /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
+		F487087B2325E14700C456AA /* fountainpen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fountainpen@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 		F487084D2322198A00C456AA = {
 			isa = PBXGroup;
 			children = (
+				F487087A2325E13300C456AA /* Resources */,
 				F48708582322198A00C456AA /* MyMemory */,
 				F48708572322198A00C456AA /* Products */,
 			);
@@ -80,6 +83,14 @@
 				F48708602322198A00C456AA /* MyMemory.xcdatamodeld */,
 			);
 			path = MyMemory;
+			sourceTree = "<group>";
+		};
+		F487087A2325E13300C456AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F487087B2325E14700C456AA /* fountainpen@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +153,7 @@
 			files = (
 				F48708672322198B00C456AA /* LaunchScreen.storyboard in Resources */,
 				F48708642322198B00C456AA /* Assets.xcassets in Resources */,
+				F487087C2325E14700C456AA /* fountainpen@2x.png in Resources */,
 				F487085F2322198A00C456AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
